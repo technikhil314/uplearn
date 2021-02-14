@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: |
           CI=true yarn build
-          cp public/index.html public/200.html
+          cp public/index.html build/200.html
         env:
           REACT_APP_ENV_TYPE: "production"
 
@@ -35,4 +35,4 @@ jobs:
         run: npm install -g surge
 
       - name: Deploy
-        run: surge public/ https://uplearn-challange.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge build/ https://uplearn-challange.surge.sh --token ${{secrets.SURGE_TOKEN}}
