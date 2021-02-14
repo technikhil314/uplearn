@@ -1,0 +1,38 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: test build and deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
+      - name: Run tests
+        run: CI=true yarn test
+
+      - name: Build
+        run: |
+          CI=true yarn build
+          cp public/index.html public/200.html
+        env:
+          REACT_APP_ENV_TYPE: "production"
+
+      - name: Install Surge
+        run: npm install -g surge
+
+      - name: Deploy
+        run: surge public/ https://uplearn-challange.surge.sh --token ${{secrets.SURGE_TOKEN}}

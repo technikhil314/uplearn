@@ -1,0 +1,12 @@
+.toast {
+  height: 80px;
+  position: fixed;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  bottom: 30px;
+  border-radius: 5px;
+  right: 40px;
+  padding: 10px 15px;
+  background-color: #ccc;
+}
