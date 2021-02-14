@@ -11,11 +11,28 @@ export const homeAsyncActions = {
     getAllJobs: () => {
         return async (dispatch) => {
             const query = gql`
-                query GetAllJobs {
-                    jobs {
-                            id
-                        }
-                    }
+            query GetAllJobs{
+                jobs {
+                  id
+                  title
+                  cities {
+                    id
+                    name
+                  },
+                  countries {
+                    id
+                    name
+                  },
+                  remotes {
+                    name
+                    type
+                  },
+                  company {
+                    name
+                    logoUrl
+                  }
+                }
+              }
             `;
             try {
                 const { data } = await client

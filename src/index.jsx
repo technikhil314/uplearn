@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import App from "./app";
 import "./assets/styles/index.scss";
-import store from "./duck/store";
+import store from "./ducks/store";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(

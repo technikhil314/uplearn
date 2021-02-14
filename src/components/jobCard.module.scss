@@ -1,0 +1,48 @@
+@import "../assets/styles/responsive";
+.jobCard {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  justify-content: space-between;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+  }
+  padding: 10px 15px;
+  box-shadow: 2px 2px 0px -20px rgba(170, 170, 170, 1),
+    0px 0px 0px 1px rgba(170, 170, 170, 1);
+  border-radius: 4px;
+  & + .jobCard {
+    margin-top: 20px;
+  }
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.jobHeader {
+  display: flex;
+  align-items: center;
+  div {
+    margin-left: 20px;
+  }
+}
+
+.jobHeader,
+.metaInfo {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.metaInfo {
+  display: flex;
+  align-items: center;
+  span:first-child {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}

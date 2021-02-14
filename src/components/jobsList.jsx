@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { homeAsyncActions } from "../ducks/home";
+import JobCard from "./jobCard";
 import Spinner from "./spinner";
 export default function JobsList() {
   const dispatch = useDispatch();
@@ -17,9 +18,11 @@ export default function JobsList() {
   if (!jobs) {
     return <Spinner text="Loading..." />;
   }
-  return jobs && jobs.length > 0 ? (
-    <div data-testid="demo">{JSON.stringify(jobs)}</div>
-  ) : (
-    <></>
+  return (
+    <section>
+      {jobs.map((job) => (
+        <JobCard key={job.id} job={job} />
+      ))}
+    </section>
   );
 }
