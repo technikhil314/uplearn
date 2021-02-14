@@ -3,16 +3,14 @@ import {
   BrowserRouter as Router,
   Redirect,
   Route,
-  Switch,
+  Switch
 } from "react-router-dom";
 import NavigationBar from "./components/navigationBar";
-import Home from "./pages/home";
 import "./components/toaster";
-import Toast from "./components/toaster";
+import Home from "./pages/home";
 export default function App() {
   return (
     <>
-      <Toast />
       <Router>
         <NavigationBar />
         <Switch>

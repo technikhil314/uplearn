@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should have user info in navigation bar 1`] = `
+<div>
+  <nav
+    class="section"
+  >
+    <img
+      alt=""
+      class="logo"
+      src="logo.jpg"
+    />
+  </nav>
+</div>
+`;

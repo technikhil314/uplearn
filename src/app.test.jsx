@@ -2,17 +2,18 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { Provider } from "react-redux";
 import App from "./app";
-import store from "./duck/store";
+import { createTestStore } from "./mocks/mockStore";
 
-test("renders learn react link", async () => {
-  await act(async () =>
-    render(
-      <Provider store={store}>
+test("Should match snapshot", async () => {
+  let renderResult;
+  await act(async () => {
+    renderResult = render(
+      <Provider store={createTestStore()}>
         <App />
       </Provider>
-    )
-  );
-  expect(screen.getByTestId("loading")).toBeInTheDocument();
-  await waitFor(() => screen.getByTestId("demo"));
-  expect(screen.getByTestId("demo")).toBeInTheDocument();
+    );
+    return renderResult;
+  });
+  await waitFor(() => screen.getByTestId("jobslist"));
+  expect(renderResult.container).toMatchSnapshot();
 });

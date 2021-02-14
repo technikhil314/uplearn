@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match snapshot 1`] = `
+<div>
+  <nav
+    class="section"
+  >
+    <img
+      alt=""
+      class="logo"
+      src="logo.jpg"
+    />
+  </nav>
+  <main>
+    <section
+      data-testid="jobslist"
+    >
+      <article
+        class="jobCard"
+        data-testid="somerandomjobid"
+      >
+        <header
+          class="jobHeader"
+        >
+          <img
+            alt=""
+            data-testid="companyLogo"
+            height="80"
+            src="//via.placeholder.com/80x80"
+            width="80"
+          />
+          <div>
+            <h2
+              data-testid="title"
+            >
+              Some random job title
+            </h2>
+            <h3
+              data-testid="company"
+            >
+              some comapny name
+            </h3>
+          </div>
+        </header>
+        <section
+          class="meta"
+        >
+          <div
+            class="metaInfo"
+          >
+            <span>
+              Country:
+            </span>
+            <span
+              data-testid="country"
+            >
+              Some city 2
+            </span>
+          </div>
+          <div
+            class="metaInfo"
+          >
+            <span>
+              City:
+            </span>
+            <span
+              data-testid="city"
+            >
+              Some city, Some city 2
+            </span>
+          </div>
+          <div
+            class="metaInfo"
+          >
+            <span>
+              Offers Remote:
+            </span>
+            <span
+              data-testid="isRemote"
+            >
+              Yes
+            </span>
+          </div>
+        </section>
+      </article>
+    </section>
+  </main>
+</div>
+`;

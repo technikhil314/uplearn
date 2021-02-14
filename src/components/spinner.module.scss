@@ -1,5 +1,5 @@
 .spinner {
-  color: #61dafb;
+  color: #2a9d8f;
   display: grid;
   place-items: center;
   height: 100%;
@@ -17,8 +17,8 @@
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #61dafb;
-  border-color: #61dafb transparent #61dafb transparent;
+  border: 6px solid #2a9d8f;
+  border-color: #2a9d8f transparent #2a9d8f transparent;
   animation: ldsDualRing 1.2s linear infinite;
 }
 @keyframes ldsDualRing {

@@ -5,11 +5,13 @@ import App from "./app";
 import "./assets/styles/index.scss";
 import store from "./ducks/store";
 import reportWebVitals from "./reportWebVitals";
+import Toast from "./components/toaster";
 
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <App />
+      <Toast />
     </React.StrictMode>
   </Provider>,
   document.getElementById("root")

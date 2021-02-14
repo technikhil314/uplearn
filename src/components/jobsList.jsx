@@ -19,7 +19,7 @@ export default function JobsList() {
     return <Spinner text="Loading..." />;
   }
   return (
-    <section>
+    <section data-testid="jobslist">
       {jobs.map((job) => (
         <JobCard key={job.id} job={job} />
       ))}

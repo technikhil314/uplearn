@@ -5,7 +5,7 @@ export default function Toast() {
   const { showToast, message, id, state } = useSelector((state) => state.toast);
   return ReactDOM.createPortal(
     showToast ? (
-      <div className={`${state} ${styles.toast}`} id={id}>
+      <div className={`${state} ${styles.toast}`} id={id} data-testid="toast">
         {message}
       </div>
     ) : null,
