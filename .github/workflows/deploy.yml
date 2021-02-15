@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: |
           CI=true yarn build
-          cp public/index.html build/200.html
+          cp build/index.html build/200.html
         env:
           REACT_APP_ENV_TYPE: "production"
 
