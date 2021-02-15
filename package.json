@@ -24,9 +24,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "cra-preact start",
+    "build": "cra-preact build",
+    "test": "cra-preact test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -52,7 +52,7 @@
       "react-hooks/exhaustive-deps": "warn",
       "react/no-children-prop": "error",
       "react/jsx-no-target-blank": "error",
-      "react/jsx-key": "error",
+      "react/jsx-key": "off",
       "react/jsx-tag-spacing": [
         "error"
       ],
@@ -70,7 +70,6 @@
       "jsx-a11y/img-redundant-alt": "error",
       "jsx-a11y/alt-text": "error",
       "no-useless-concat": "error",
-      "react/jsx-key": "off",
       "react/display-name": "off",
       "no-multiple-empty-lines": [
         "error",
@@ -105,6 +104,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "cra-preact": "^0.4.0",
     "graphql": "^15.5.0",
     "husky": "^5.0.9",
     "msw": "^0.26.2",
