@@ -6,6 +6,7 @@ import { createTestStore } from "../mocks/mockStore";
 import { server } from "../mocks/server";
 import JobsList from "./jobsList";
 import Toast from "./toaster";
+
 test("Should show loader only when error in data fetching", async () => {
   server.resetHandlers(
     graphql.query("GetAllJobs", (req, res, ctx) => {

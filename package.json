@@ -24,9 +24,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "cra-preact start",
-    "build": "cra-preact build",
-    "test": "cra-preact test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

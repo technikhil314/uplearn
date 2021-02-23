@@ -3,11 +3,12 @@ import {
   BrowserRouter as Router,
   Redirect,
   Route,
-  Switch
+  Switch,
 } from "react-router-dom";
 import NavigationBar from "./components/navigationBar";
 import "./components/toaster";
 import Home from "./pages/home";
+import { Job } from "./pages/job";
 export default function App() {
   return (
     <>
@@ -19,6 +20,9 @@ export default function App() {
           </Route>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/job/:companySlug/:jobSlug">
+            <Job />
           </Route>
           <Route>
             <Redirect to="/home" />
